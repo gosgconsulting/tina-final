@@ -20,7 +20,7 @@ export default isLocal
           token: process.env.GITHUB_PERSONAL_ACCESS_TOKEN,
         }),
       databaseAdapter: new MongodbLevel({
-          collectionName: 'tinacms',
+          collectionName: `tinacms-${branch}`,
           dbName: 'tinacms',
           mongoUri: process.env.MONGODB_URI,
         }),
